@@ -1,55 +1,67 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
-<head>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{% static "styles/style.css" %}">
     <title>{% block title %}Ekuty's Portfolio{% endblock %}</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <nav id="navbar">
-        {% block navbar %}
-            <div class="nav-container">
-                <div class="logo">
-            LOGO
-        </div>
+      {% block navbar %}
+      <div class="nav-container">
+        <div class="logo">Ekuty's Portfolio</div>
         <div class="hamb-btn">
-            <div class="nav-open" id="nav-open">
-                E
-            </div>
-            <div class="nav-close" id="nav-close">
-                X
-            </div>
+          <div class="nav-open" id="nav-open">
+            <img class="nav-icon-img" src="{% static 'images/nav-open.png' %}" alt="Menu">
+          </div>
+          <div class="nav-close" id="nav-close">
+            <img class="nav-icon-img" src="{% static 'images/nav-close.png' %}" alt="Close Menu">
+          </div>
         </div>
         <div class="nav-links" id="nav-links">
-            <ul>
-                <li><a href="#home"><span class="harsh-style">#</span>home</a></li>
-                <li><a href="#works"><span class="harsh-style">#</span>works</a></li>
-                <li><a href="#about-me"><span class="harsh-style">#</span>about-me</a></li>
-                <li><a href="#contact"><span class="harsh-style">#</span>contact</a></li>
-                <form method="get" action="/set-language/">
-                    <select name="lang" onchange="this.form.submit()" id="">
-                        <option value="en">
-                            English
-                        </option>
-                        <option value="fr">
-                            French
-                        </option>
-                    </select>
-                </form>
-            </ul>
+          <ul class="nav-hover">
+            <li>
+              <a href="#home"><span class="harsh-style">#</span>home</a>
+            </li>
+            <li>
+              <a href="#works"><span class="harsh-style">#</span>works</a>
+            </li>
+            <li>
+              <a href="#about-me"><span class="harsh-style">#</span>about-me</a>
+            </li>
+            <li>
+              <a href="#contact"><span class="harsh-style">#</span>contact</a>
+            </li>
+            <form method="get" action="/set-language/">
+              <select name="lang" onchange="this.form.submit()" id="">
+                <option value="en">EN</option>
+                <option value="fr">FR</option>
+              </select>
+            </form>
+          </ul>
         </div>
-            </div>
-        {% endblock %}
+      </div>
+      {% endblock %}
     </nav>
 
-    <div id="content">
-        {% block content %}
-        <h1>Welcome to Ekuty's Portfolio</h1>
-        <p>This is a showcase of my work and projects.</p>
-        {% endblock %}
-
-        <script src="{% static 'js/script.js' %}"></script>
-    </div>
-</body>
+    <main id="content">
+      {% block content %}
+      <section id="home">
+        <div class="home-container">
+            <div class="home-top">
+                <div class="home-left-top">
+                    <h1 class="message-top">Ekuty is a <span class="message-pink">Frontend</span> and <span class="message-pink">Backend</span> web developer</h1>
+                    <p class="text-grey">He crafts responsive websites where technologies meet creativity</p>
+                </div>
+                <div class="home-right-top"></div>
+            </div>
+            <div class="home-bottom"></div>
+        </div>
+      </section>
+      {% endblock %}
+      <script src="{% static 'js/script.js' %}"></script>
+    </main>
+  </body>
 </html>
