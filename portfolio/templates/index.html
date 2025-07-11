@@ -11,7 +11,7 @@
     <nav id="navbar">
       {% block navbar %}
       <div class="nav-container">
-        <div class="logo">Ekuty's Portfolio</div>
+        <div class="logo">Ekuty's</div>
         <div class="hamb-btn">
           <div class="nav-open" id="nav-open">
             <img class="nav-icon-img" src="{% static 'images/nav-open.png' %}" alt="Menu">
@@ -48,16 +48,51 @@
 
     <main id="content">
       {% block content %}
+      {% comment %} Home section {% endcomment %}
       <section id="home">
         <div class="home-container">
             <div class="home-top">
                 <div class="home-left-top">
                     <h1 class="message-top">Ekuty is a <span class="message-pink">Frontend</span> and <span class="message-pink">Backend</span> web developer</h1>
                     <p class="text-grey">He crafts responsive websites where technologies meet creativity</p>
+                    <a href="#contact" class="contact-btn">Contact me!!</a>
                 </div>
-                <div class="home-right-top"></div>
+                <div class="home-right-top">
+                    <div class="home-right-t">
+                        {% comment %} <img src="{% static 'images/wire.png' %}" alt="" class="img-wire"> {% endcomment %}
+                        <img src="{% static 'images/man.png' %}" alt="Ekuty's image" class="img-man">
+                        {% comment %} <img src="{% static 'images/dot.png' %}" alt="" class="img-dot"> {% endcomment %}
+                    </div>
+                    <div class="home-right-bottom">
+                        <div class="pink-box"></div>
+                        <p class="text-grey-1">Curently working on <span class="text-white">FullStack Development</span> and <span class="text-white">Machine Learning</span> Projects</p>
+                    </div>
+                </div>
             </div>
-            <div class="home-bottom"></div>
+            <div class="home-bottom-center">
+              <div class="home-bottom">
+                <div class="text-box">
+                    <img src="{% static 'images/double_quote.png' %}" alt="" class="double-quote">
+                    <p class="text">With great power comes great electricity bill</p>
+                </div>
+                <div class="text-author">
+                  <img src="{% static 'images/double_quote.png' %}" alt="" class="double-quote-1">
+                  <p class="text-author-stl">- Dr. Who</p>
+                </div>
+            </div>
+            </div>
+        </div>
+      </section>
+      {% comment %} works section {% endcomment %}
+      <section id="works">
+        <div class="works-container">
+          <div class="works-heading">
+            <h1 class="works-h"><span class="harsh-style">#</span>Projects</h1>
+            <div class="works-line"></div>
+          </div>
+          <div class="works-more">
+            <a href="#" class="works-more-link">View All ~~&gt;</a>
+          </div>
         </div>
       </section>
       {% endblock %}
