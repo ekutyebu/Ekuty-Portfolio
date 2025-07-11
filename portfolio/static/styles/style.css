@@ -211,9 +211,6 @@ section {
 /* Works section styles */
 .works-container {
   color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   margin-top: 50px;
   margin-bottom: 30px;
 }
@@ -232,7 +229,65 @@ section {
   margin-left: 20px;
 }
 
+.works-project-card {
+  border: solid 1px #fff;
+  max-width: 330px;
+  min-width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ABB2BF;
+  margin-bottom: 20px;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+}
+
+.card-project-lang-used {
+  border: solid 1px #fff;
+  border-left: none;
+  border-right: none;
+  width: 100%;
+  padding: 5px;
+}
+
+.project-desc {
+  width: 100%;
+  padding: 5px;
+}
+
+.project-title {
+  color: #fff;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.card-btns {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.live-btn {
+  border: solid 1px #FF79C6;
+  padding: 5px 10px 5px 10px;
+}
+
+.code-btn {
+  border: solid 1px #ABB2BF;
+  padding: 5px 10px 5px 10px;
+}
+
 /* Responsive styling */
+@media only screen and (min-width: 500px) {
+  .work-grids {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+}
 @media only screen and (min-width: 769px) {
   .nav-links {
     display: block;
@@ -285,5 +340,17 @@ section {
     display: flex;
     justify-content: center;
     margin-top: 40px;
+  }
+
+  /* works section styles */
+  .works-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .work-grids {
+    display: grid;
+    grid-template-columns: auto auto auto;
   }
 }
