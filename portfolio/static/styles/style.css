@@ -209,19 +209,22 @@ section {
 }
 
 /* Works section styles */
-.works-container {
+.works-container,
+.skills-container {
   color: #fff;
   margin-top: 50px;
   margin-bottom: 30px;
 }
-.works-heading {
+.works-heading,
+.skills-heading {
   display: flex;
   align-items: center;
   color: #fff;
   width: 60%;
 }
 
-.works-line {
+.works-line,
+.skills-line {
   width: 80%;
   min-width: 10px;
   height: 2px;
@@ -279,13 +282,54 @@ section {
   padding: 5px 10px 5px 10px;
 }
 
+/* Skills section */
+.skills-list {
+  width: 100%;
+  display: flex;
+}
+.skills-left img {
+  display: none;
+  width: 50%;
+  max-width: 349px;
+  height: auto;
+}
+
+.skills-right {
+  color: #ABB2BF;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.skills-items {
+  border: solid 2px #fff;
+  width: 100%;
+  max-width: 178px;
+}
+
+.skills-title {
+  border-bottom: solid 2px #fff;
+  padding: 10px;
+}
+
+.skills-listed {
+  padding: 10px;
+}
+
 /* Responsive styling */
 @media only screen and (min-width: 500px) {
+  /* works section */
   .work-grids {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
     margin-bottom: 20px;
+  }
+
+  /* skills section */
+  .skills-right {
+    grid-template-columns: auto auto auto;
   }
 }
 @media only screen and (min-width: 769px) {
@@ -352,5 +396,10 @@ section {
   .work-grids {
     display: grid;
     grid-template-columns: auto auto auto;
+  }
+
+  /* Skills section */
+  .skills-left img {
+    display: block;
   }
 }
