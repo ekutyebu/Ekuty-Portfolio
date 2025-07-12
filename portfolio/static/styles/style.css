@@ -210,21 +210,24 @@ section {
 
 /* Works section styles */
 .works-container,
-.skills-container {
+.skills-container,
+.about-container {
   color: #fff;
   margin-top: 50px;
   margin-bottom: 30px;
 }
 .works-heading,
-.skills-heading {
+.skills-heading,
+.about-heading {
   display: flex;
   align-items: center;
   color: #fff;
-  width: 60%;
+  width: 50%;
 }
 
 .works-line,
-.skills-line {
+.skills-line,
+.about-line {
   width: 80%;
   min-width: 10px;
   height: 2px;
@@ -286,6 +289,7 @@ section {
 .skills-list {
   width: 100%;
   display: flex;
+  justify-content: space-around;
 }
 .skills-left img {
   display: none;
@@ -297,7 +301,7 @@ section {
 .skills-right {
   color: #ABB2BF;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto ;
   gap: 10px;
   margin-bottom: 20px;
 }
@@ -317,7 +321,30 @@ section {
   padding: 10px;
 }
 
+/* about section */
+.about-left {
+  width: 80%;
+}
+.about-text {
+  color: #ABB2BF;
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 50px;
+}
+.about-img {
+  display: none;
+  width: 30%;
+  max-width: 348px;
+  height: auto;
+}
+
 /* Responsive styling */
+@media only screen and (min-width: 350px) {
+  /* skills section */
+    .skills-right {
+      grid-template-columns: auto auto;
+    }
+}
 @media only screen and (min-width: 500px) {
   /* works section */
   .work-grids {
@@ -400,6 +427,20 @@ section {
 
   /* Skills section */
   .skills-left img {
+    display: block;
+  }
+
+  /* about section */
+  .about-flex {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .about-left {
+  width: 50%;
+}
+
+  .about-img {
     display: block;
   }
 }

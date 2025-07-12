@@ -139,17 +139,15 @@
         <div class="work-grids">
           {% for project in projects %}
           <div class="works-project-card">
-            <img
-              class="project-image"
-              src="{{ project.image.url }}"
-              alt=""
-            />
-            <div class="card-project-lang-used">{{ project.programing_lang_used }}</div>
+            <img class="project-image" src="{{ project.image.url }}" alt="" />
+            <div class="card-project-lang-used">
+              {{ project.programing_lang_used }}
+            </div>
             <div class="project-desc">
               <h1 class="project-title">{{ project.title }}</h1>
               <p class="desc-of-proj">{{ project.description }}</p>
               <div class="card-btns">
-                <a href="{{ project.link }}"  class="live-btn">live &lt;~&gt;</a>
+                <a href="{{ project.link }}" class="live-btn">live &lt;~&gt;</a>
                 <a href="#" class="code-btn">code &ge;</a>
               </div>
             </div>
@@ -166,52 +164,58 @@
           </div>
         </div>
         <div class="skills-list">
-            <div class="skills-left">
-              <img src="{% static 'images/skills_img.png' %}" alt="">
+          <div class="skills-left">
+            <img src="{% static 'images/skills_img.png' %}" alt="" />
+          </div>
+          <div class="skills-right">
+            <div class="skills-items">
+              <div class="skills-title">language</div>
+              <div class="skills-listed">css, javascript</div>
             </div>
-            <div class="skills-right">
-              <div class="skills-items">
-                <div class="skills-title">
-                  language
-                </div>
-                <div class="skills-listed">
-                  css, javascript
-                </div>
-              </div>
-              <div class="skills-items">
-                <div class="skills-title">
-                  language
-                </div>
-                <div class="skills-listed">
-                  css, javascript
-                </div>
-              </div>
-              <div class="skills-items">
-                <div class="skills-title">
-                  language
-                </div>
-                <div class="skills-listed">
-                  css, javascript
-                </div>
-              </div>
-              <div class="skills-items">
-                <div class="skills-title">
-                  language
-                </div>
-                <div class="skills-listed">
-                  css, javascript
-                </div>
-              </div>
-              <div class="skills-items">
-                <div class="skills-title">
-                  language
-                </div>
-                <div class="skills-listed">
-                  css, javascript
-                </div>
-              </div>
+            <div class="skills-items">
+              <div class="skills-title">language</div>
+              <div class="skills-listed">css, javascript</div>
+            </div>
+            <div class="skills-items">
+              <div class="skills-title">language</div>
+              <div class="skills-listed">css, javascript</div>
+            </div>
+            <div class="skills-items">
+              <div class="skills-title">language</div>
+              <div class="skills-listed">css, javascript</div>
+            </div>
+            <div class="skills-items">
+              <div class="skills-title">language</div>
+              <div class="skills-listed">css, javascript</div>
             </div>
           </div>
+        </div>
+      </section>
+      {% comment %} about section {% endcomment %}
+      <section id="about-me">
+        <div class="about-container">
+          <div class="about-heading">
+            <h1 class="about-h"><span class="harsh-style">#</span>About</h1>
+            <div class="about-line"></div>
+          </div>
+        </div>
+        <div class="about-flex">
+          <div class="about-left">
+            <p class="about-text">Hello, I’m Ekuty!</p>
+            <p class="about-text">
+              I’m a self-taught FullStack web developer based in Douala, Cameroon. I
+              can develop responsive websites from scratch and raise them into
+              modern user-friendly web experiences.
+            </p>
+            <p class="about-text">
+              Transforming my creativity and knowledge into a websites has been
+              my passion for over a year. I have been helping various clients to
+              establish their presence online. I always strive to learn about
+              the newest technologies and frameworks.
+            </p>
+          </div>
+          <img src="{% static 'images/about_img.png' %}" alt="" class="about-img">
+        </div>
       </section>
       {% endblock %}
       <script src="{% static 'js/script.js' %}"></script>
