@@ -230,14 +230,15 @@
             <p class="contact-text">
               I’m interested in freelance opportunities. However, if you have other request or question, don’t hesitate to contact me
             </p>
-            {% csrf_token %}
-            <form action="" method="get">
+            
+            <form action="{% url 'process_form' %}" method="POST">
+              {% csrf_token %}
               <div class="email-name">
-                <div class="input-name-email"><input id="name" type="name" placeholder="Name"></div>
-                <div class="input-name-email"><input id="email" type="email" name="email" placeholder="Email"></div>
+                <div class="input-name-email"><input type="text" name="name" placeholder="Name" required></div>
+                <div class="input-name-email"><input type="email" name="email" placeholder="Email" required></div>
               </div>
-              <div class="title-text"><input type="text" placeholder="Title"></div>
-              <div class="message-box"><textarea maxlength="200" placeholder="Message"></textarea></div>
+              <div class="title-text"><input type="text" name="title" placeholder="Title" required></div>
+              <div class="message-box"><textarea name="message" maxlength="500" placeholder="Message" required></textarea></div>
               <button class="contact-btn" type="submit">Send</button>
             </form>
           </div>
